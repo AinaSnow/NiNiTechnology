@@ -46,7 +46,7 @@ alertall "超级跳" before 7 speak "voice" "超级跳"
 alertall "左右拳蓄力" before 4 speak "voice" "左右拳"
 alertall "黄标x8" before 2 speak "voice" "黄标散开"
 alertall "橙标x8" before 2 speak "voice" "橙标分摊"
-alertall "橙标x4黄标x4_T奶外围" before 6 speak "voice" "替奶外围，幕帘"
+alertall "橙标x4黄标x4_T奶外围" before 6 speak "voice" "替奶外围"
 alertall "橙标x4黄标x4_T奶中央" before 6 speak "voice" "替奶中央"
 alertall "流沙地洞炮结束" before 13 speak "voice" "牵制"
 
@@ -56,7 +56,7 @@ alertall "蓝标x2橙标x4" before 2 speak "voice" "蓝标高第"
 alertall "蓝标x2橙标x2黄标x2" before 2 speak "voice" "三色标"
 alertall "高低地三色标" before 2 speak "voice" "蓝标高第"
 alertall "高低地蓝橙标" before 2 speak "voice" "蓝标高第"
-alertall "高低地石牢" before 10 speak "voice" "高地石牢，幕帘魔抗"
+alertall "高低地石牢" before 10 speak "voice" "高地石牢"
 alertall "流沙地洞炮开始" before 6 speak "voice" "流沙顺时针"
 #alertall "高低地读条" before 3 speak "voice" "高低第"
 alertall "拆地板1" before 12 speak "voice" "拆地板"
@@ -65,6 +65,8 @@ alertall "拆地板1" before 12 speak "voice" "拆地板"
 alertall "狂暴" before 61 speak "voice" "60秒狂暴"
 alertall "狂暴" before 31 speak "voice" "30秒狂暴"
 
+alertall "❤天星" before 1 sound "AST-天星.wav"
+alertall "❤天星" before 1 sound "AST-天星.wav"
 alertall "❤地星准备" before 2 sound "AST-地星准备.wav"
 alertall "❤光速" before 2 sound "AST-光速.wav"
 alertall "❤光速双相位" before 2 sound "AST-光速.wav"
@@ -82,26 +84,26 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 #============================================================
 #                          P1
 #============================================================
-0 	--Reset-- sync /Removing combatant Titan.  Max HP: 1494357344/ window 10000 jump 0
-0 	--Start-- sync /From the heart of a mountain, I rise/ window 10,10
-10	易伤死刑读条 sync /(starts using|readies|begins casting) Stonecrusher/ window 10,5
+0 	--Reset-- sync /Removing combatant (.*?) Max HP: 1494357344/ window 10000 jump 0
+0 	--Start-- sync /From the heart of a mountain, I rise|聞け、大地の叫びを……感じよ、大地の重みを……|聆听/ window 10,10
+10	易伤死刑读条 sync /] 14:4116:/ window 10,5
 14	易伤死刑
 28	流沙格出现
 30	黄标x8
 33	流沙格判定
-34	扩散格出现 sync /(starts using|readies|begins casting) Evil Earth/ window 30,10
+34	扩散格出现 sync /] 14:410B:/ window 30,10
 37	黄标判定
-39	❤双相位
+#39	❤双相位
 41	橙标x8
 45	❤地星准备
 48	橙标判定
 55	AOE
-61	超级跳读条 sync /(starts using|readies|begins casting) Geocrush/ window 60,10
+61	超级跳读条 sync /] 14:4113:/ window 60,10
 67	超级跳
 70	橙标x5黄标x3
 71	变形
-171	变形1-车车形态 sync /Titan uses Earthen Wheels|:Titan:40E8:Earthen Wheels:/ window 120,10 jump 1071
-271	变形1-猛男形态 sync /Titan uses Earthen Gauntlets|:Titan:40E6:Earthen Gauntlets:/ window 220,10 jump 2071
+171	变形1-车车形态 sync /] 15:[0-9A-F]{8}:(Titan|タイタン|泰坦):40E8:/ window 120,10 jump 1071
+271	变形1-猛男形态 sync /] 15:[0-9A-F]{8}:(Titan|タイタン|泰坦):40E6:/ window 220,10 jump 2071
 #============================================================
 #                          P1--机车猛男
 #============================================================
@@ -112,12 +114,12 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 1082	橙黄标判定 
 1086	冲锋死刑
 1088	❤光速
-1087	月环读条 sync /(starts using|readies|begins casting) Magnitude 5/ window 210,20
+1087	月环读条 sync /] 14:4121:/ window 210,20
 1090	黄标x8
 1096	黄标判定 
 1091	变形-普通形态 
 
-1103	陨石点名 sync /(starts using|readies|begins casting) Crumbling Down/ window 125,20
+1103	陨石点名 sync /] 14:410E:/ window 125,20
 1108	陨石AD放置 
 1108	陨石点名2
 1110	❤地星准备
@@ -128,11 +130,11 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 1119	石阵【2--】 
 1121	石阵【--3】 
 
-1123	超级闪光读条 sync /(starts using|readies|begins casting) Seismic Wave/ window 148,20
+1123	超级闪光读条 sync /] 14:4110:/ window 148,20
 1127	超级闪光
 1130	石阵【-1-】爆炸 
 1142	AOE
-1145	易伤死刑读条 sync /(starts using|readies|begins casting) Stonecrusher/ window 100,10
+1145	易伤死刑读条 sync /] 14:4116:/ window 100,10
 1150	易伤死刑
 1173	超级跳
 
@@ -152,7 +154,7 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 1216	左右刀反向判定1
 1219	左右刀反向判定2
 1220	石阵【十】爆炸
-1224	Boss上天 sync /Now you too shall go the way of all the earth/ window 220,30 jump 3224
+1224	Boss上天 sync /Now you too shall go the way of all the earth|我は、そなたの心を映す鏡|让我回应你的心灵/ window 220,30 jump 3224
 1239	（过场30秒）
 1254	Boss落地
 
@@ -177,7 +179,7 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 2114	变形-普通形态
 
 2118	石阵【∷】爆炸 
-2128	陨石点名 sync /(starts using|readies|begins casting) Crumbling Down/ window 125,20
+2128	陨石点名 sync /] 14:410E:/ window 125,20
 2133	陨石AD放置
 2133	陨石点名2
 2139	陨石BC放置
@@ -187,11 +189,11 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 2144	陨石伤害2 
 2144	石阵【2--】
 2146	石阵【--3】
-2148	超级闪光读条 sync /(starts using|readies|begins casting) Seismic Wave/ window 148,20
+2148	超级闪光读条 sync /] 14:4110:/ window 148,20
 2152	超级闪光
 2155	石阵【-1-】爆炸
 2167	AOE
-2170	易伤死刑读条 sync /(starts using|readies|begins casting) Stonecrusher/ window 100,10
+2170	易伤死刑读条 sync /] 14:4116:/ window 100,10
 2175	易伤死刑
 2175	❤地星
 2198	超级跳
@@ -202,10 +204,10 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 2208	橙黄标判定
 2212	冲锋死刑
 2213	❤双相位
-2213	月环读条 sync /(starts using|readies|begins casting) Magnitude 5/ window 210,20
+2213	月环读条 sync /] 14:4121:/ window 210,20
 2216	黄标x8
 2222	黄标判定
-2224	Boss上天 sync /Now you too shall go the way of all the earth/ window 220,30 jump 3224
+2224	Boss上天 sync /Now you too shall go the way of all the earth|我は、そなたの心を映す鏡|让我回应你的心灵/ window 220,30 jump 3224
 2239	（过场30秒）
 2254	Boss落地
 
@@ -215,18 +217,19 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 3239	（过场30秒）
 3245	❤地星准备
 3254	Boss落地
-3256	P2开始 sync /Bow down, overdweller!/ window 3250,10
+3256	P2开始 sync /Bow down, overdweller!|大地の怒りに砕け散れ！！|在大地的愤怒中/ window 3250,10
 3263	大地之怒AOE伤害
 3270	左右拳蓄力
 3276	流沙格出现
 3286	大拳拳出现
 3287	蓝标x1击退
+3292	❤天星
 3291	大拳拳判定
 3294	蓝标判定
 3295	双T死刑
 3301	双T分摊
 3311	❤光速
-3311	高低地读条 sync /(starts using|readies|begins casting) Tectonic Uplift/ window 3310,20
+3311	高低地读条 sync /] 14:4122:/ window 3310,20
 3312	蓝标x2低地
 3315	❤地星准备
 3318	高低地
@@ -236,6 +239,7 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 3331	大地之怒读条
 3339	大地之怒AOE伤害
 3354	石牢拆地板
+3354	❤天星
 3364	拆地板1
 3364	石牢x2出现
 3378	拆地板2
@@ -245,17 +249,18 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 3395	大地之怒读条
 3402	❤光速
 3403	大地之怒五连踩
-3406	5连踩读条 sync /(starts using|readies|begins casting) Tumult/ window 3400,20
+3406	5连踩读条 sync /] 14:412A:/ window 3400,20
 3411	5连踩2
 3422	大拳拳出现
 3424	蓝标x1击退
 3427	大拳拳判定
+3427	❤天星
 3430	左右拳蓄力
 3430	双T死刑
 3430	蓝标判定
 3433	扩散格出现
 3446	❤地星准备
-3449	高低地读条 sync /(starts using|readies|begins casting) Tectonic Uplift/ window 60,10
+3449	高低地读条 sync /] 14:4122:/ window 60,10
 3454	❤罩子
 3455	高低地石牢
 3457	橙标判定
@@ -274,8 +279,9 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 3507	❤地星准备
 3514	大地之怒五连踩
 3515	❤双相位
-3517	5连踩读条 sync /(starts using|readies|begins casting) Tumult/ window 60,10
+3517	5连踩读条 sync /] 14:412A:/ window 60,10
 3522	5连踩2
+3522	❤天星
 3542	拆地板1
 3553	双T分摊
 3561	蓝标x2橙标x2黄标x2
@@ -287,9 +293,10 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 #============================================================
 #                          P3--小泰坦出现
 #============================================================
-3585	P3开始 sync /(starts using|readies|begins casting) Orogenesis/ window 3580,30
+3585	P3开始 sync /] 14:4372:/ window 3580,30
 3593	小泰坦出现
 3604	大地之怒AOE伤害
+3604	❤天星
 3611	流沙地洞炮
 3615	橙标x4黄标x4_T奶中央
 3622	橙黄标判定
@@ -305,13 +312,14 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 3650	❤光速双相位
 3657	AOE
 3668	大地之怒AOE伤害 
+3668	❤罩子天星
 3676	流沙地洞炮
 3680	橙标x4黄标x4_T奶外围
 3687	橙黄标判定 
 3689	流沙地洞炮结束 
 3690	❤地星准备
-3690	左右拳蓄力 sync /Titan Maximum is gathering aetherial energy/ window 3690,10
-3703	易伤死刑读条 sync /(starts using|readies|begins casting) Stonecrusher/ window 400,20
+3690	左右拳蓄力 sync /Titan Maximum is gathering aetherial energy|极限泰坦正在积蓄力量/ window 3690,10
+3703	易伤死刑读条 sync /] 14:4116:/ window 400,20
 3709	易伤死刑
 3734	大地之怒AOE伤害
 3742	流沙地洞炮
@@ -320,7 +328,7 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 3755	流沙地洞炮结束
 3756	左右拳蓄力
 3760	❤地星准备
-3768	软狂暴开始 sync /(starts using|readies|begins casting) Voice of the Land/ window 30,2
+3768	软狂暴开始 sync /] 14:4114:/ window 30,2
 3773	狂暴AOE1
 3775	❤罩子
 3776	5连踩
@@ -329,5 +337,5 @@ alertall "❤罩子" before 2 sound "SCH-进罩子.wav"
 3785	狂暴AOE2
 3788	5连踩
 3797	狂暴AOE3
-3800	狂暴台词 sync /Your soul is doomed to everlasting torment/ window 3800,10
+3800	狂暴台词 sync /Your soul is doomed to everlasting torment|その心の弱さを、地の底で悔やむがいいッ|被恐怖吞没吧/ window 3800,10
 3810	狂暴

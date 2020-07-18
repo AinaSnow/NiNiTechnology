@@ -1,0 +1,251 @@
+﻿# The Epic Of Alexander (Ultimate)
+# Created by Puktata Pako on Asura
+# Last Updated: 11/16/2019
+########################################################
+
+hideall "--Reset--"
+hideall "读条"
+hideall "台词"
+
+##############################################################
+################## Windows 8 & 10 音效 ##################
+#删去前方的#标签来选择声音
+define speaker "voice" "Microsoft Huihui Desktop" 2 100
+#define speaker "voice" "Microsoft Hanhan Desktop" 2 100
+
+#################### Windows 7 音效 ####################
+#删去前方的#标签来选择声音
+#define speaker "voice" "Microsoft Lili" 0 100
+################ CUSTOMIZE Call Outs #####################
+
+alertall "顺劈" before 3 speak "voice" "顺劈"
+alertall "正义飞踢" before 5 speak "voice" "集合减伤"
+alertall "爆炸1" before 1 speak "voice" "1"
+alertall "爆炸2" before 1 speak "voice" "2"
+alertall "爆炸3" before 1 speak "voice" "3"
+alertall "爆炸4" before 1 speak "voice" "4"
+#alertall "爆炸5" before 1 speak "voice" "5"
+alertall "爆炸6" before 1 speak "voice" "1"
+alertall "爆炸7" before 1 speak "voice" "2"
+alertall "爆炸8" before 1 speak "voice" "3"
+alertall "爆炸9" before 1 speak "voice" "4"
+#alertall "爆炸10" before 1 speak "voice" "十"
+#alertall "AOE" before 5 speak "voice" "AOE"
+alertall "2连AOE" before 7 speak "voice" "二连AOE"
+#alertall "4毒buff" before 5 speak "voice" "散开接毒"
+alertall "光子" before 7 speak "voice" "光子"
+#alertall "火泥引导" before 8 speak "voice" "远程引导"
+alertall "传毒" before 1 speak "voice" "传毒"
+alertall "回旋碎踢" before 7 speak "voice" "回旋碎踢"
+#alertall "地雷+双计数圈" before 5 speak "voice" "计数踩雷"
+alertall "混乱风暴" before 7 speak "voice" "超级闪光，蓝橙紫绿"
+#alertall "双重火箭飞拳" before 7 speak "voice" "火箭飞拳"
+#alertall "超级跳" before 10 speak "voice" "超级跳，引导站位"
+#alertall "向后扇形攻击" before 4 speak "voice" "向后喷火"
+alertall "场外飞轮出现" before 2 speak "voice" "飞盘"
+alertall "制导和飞轮区域判定" before 1 speak "voice" "回中央"
+alertall "护盾喷火2" before 8 speak "voice" "喷火"
+#alertall "护盾喷火2" before 0 speak "voice" "集火护盾"
+alertall "水雷1" before 8 speak "voice" "水雷1"
+alertall "水雷2" before 8 speak "voice" "水雷2"
+alertall "水雷3" before 8 speak "voice" "水雷3"
+alertall "喷火1" before 9 speak "voice" "喷火站位"
+#alertall "反毒出现" before 1 speak "voice" "反毒出现"
+alertall "神罚射线（死刑）" before 5 speak "voice" "死刑"
+alertall "神罚射线（死刑）" before 1 speak "voice" "三连顺劈"
+alertall "亚历山大十字" before 3 speak "voice" "十字十字"
+
+alertall "巡航者顺劈1" before 5 speak "voice" "引导顺劈"
+alertall "正义号出现（二运）" before 1 speak "voice" "正义号集合"
+#alertall "灵泉1" before 2 speak "voice" "灵泉1"
+#alertall "灵泉2" before 2 speak "voice" "灵泉2"
+#alertall "灵泉3" before 2 speak "voice" "灵泉3"
+alertall "幕帘" before 2 speak "voice" "幕帘"
+alertall "扩散盾" before 3 speak "voice" "地神幻光扩散盾"
+alertall "火龙卷4" before 4 speak "voice" "天使盾，魔抗"
+alertall "火龙卷5" before 2 speak "voice" "低语"
+alertall "火龙卷6" before 2 speak "voice" "罩子，真言"
+alertall "火龙卷7" before 2 speak "voice" "血仇，行吟"
+alertall "火龙卷10" before 3 speak "voice" "大翅膀"
+alertall "中央分摊" before 6 speak "voice" "中央集合，幕帘群盾"
+alertall "百万神圣" before 8 speak "voice" "百万神圣，罩子血仇昏乱"
+#################################################################
+#                  P1
+#################################################################
+# -2秒地星准备
+0	"--Reset--" sync /Removing combatant (.*?) Max HP: 680756288/ window 10000 jump 0
+0 	开始 sync /] 15:400.....:(Living Liquid|リビングリキッド|有生命活水):4978:/ window 10,1
+7 	顺劈
+12 	倾泄读条 sync /] 14:4826/ window 12,5
+16 	倾泄
+17 	分身和水龙卷出现
+29 	4小怪出现
+30 	外场水波引导x3
+32 	远近拍手
+34 	顺劈
+35 	外场水波二连x3
+36 	小怪叠层
+38 	水球出现
+39 	水量均等
+47 	小怪叠层
+53 	顺劈
+63 	万变水波引导x4
+66 	水量均等
+68 	内侧水波外侧水圈
+71 	万变水波三连x4
+77 	六连AOE
+83 	双T接线伤害
+83 	六连AOE结束
+84 	倾泄读条 sync /] 14:4826/ window 50,10
+86 	水量均等
+88 	倾泄
+89 	外场水龙卷改变
+92 	窒息x6
+100 	万变水波引导x4
+105 	水量均等
+105 	内侧水波外侧水圈
+106 	外场水波引导x3
+108 	水圈判定
+109 	万变水波三连x4
+111 	外场水波二连x3
+116 	水球出现
+120 	远近拍手
+124 	六连AOE
+126 	水量均等
+129 	六连AOE结束
+130 	顺劈
+132 	狂暴读条 sync /] 14:49B3/ window 60,10
+134 	狂暴被打断 sync /Intruders to central calculation system detected|階差閉宇宙ヲ、脅カス敵ヲ発見……撃滅スル！/ window 135,20
+
+#################################################################
+#                  P2 顺劈前2秒高达出现
+#################################################################
+137 	麻将点名出现
+139 	爆炸1
+141 	爆炸2
+144 	爆炸3
+146 	爆炸4
+147 	麻将顺劈1
+148 	爆炸5
+148 	麻将冲锋2
+150 	爆炸6
+151 	麻将顺劈3
+152 	爆炸7
+153 	麻将冲锋4
+155 	爆炸8
+156 	麻将顺劈5
+157 	爆炸9
+157 	麻将冲锋6
+159 	爆炸10	
+161 	麻将顺劈7
+162 	麻将冲锋8
+165 	P2台词 sync /Designation: Brute Justice. Temporal interlopers identified|想定外ノ時空改変者ヲ発見……鉄槌ヲ下ス！/ window 165,10
+166 	正义飞踢
+168 	双boss出现
+173 	驱逐者读条龙卷
+178 	AOE
+181 	4毒buff
+187 	水雷buff
+188 	场外飞轮出现
+193 	制导读条 sync /] 14:482F:/ window 50,10
+196 	制导和飞轮区域判定
+200 	制导爆炸
+203 	光子
+203		传毒
+212		回旋碎踢
+217 	水雷1
+225 	火泥引导
+227 	地雷+双计数圈
+232 	计数圈判定
+233		传毒
+245 	开庭读条 sync /] 14:483B:/ window 50,10
+247 	水雷2
+249 	反毒出现
+256 	护盾喷火2
+263		传毒
+268 	AOE
+277 	水雷3
+289 	混乱风暴
+292 	闭庭读条	sync /] 14:483C:/ window 50,10
+294 	混乱风暴判定
+298 	终审判定
+309 	光子
+316 	双重火箭飞拳
+324 	超级跳
+327 	向后扇形攻击
+337 	2连AOE
+346 	AOE
+361 	狂暴
+
+#################################################################
+#                  P3 
+#################################################################
+360 	p3台词 sync /who would prove yourself worthy of your utopia|理想郷に到る道を導くため/ window 360,20
+362 	三体出现
+364 	buff出现
+374 	时间停止
+384 	boss出现
+390 	神罚射线读条 sync /] 14:4A80:/ window 50,10
+395 	神罚射线（死刑）
+398 	3连顺劈
+400 	顺劈
+402 	顺劈
+403		幕帘
+410		扩散盾
+414 	boss消失
+417		猫出现
+418 	连线球出现
+426 	审判结晶点名出现
+432 	真心出现
+442 	喷火1
+445 	喷火2
+447 	喷火3
+449 	buff出现
+457 	金心就位
+463 	buff清算+十字
+463		亚历山大十字
+468 	巡航者顺劈1
+469 	巡航者顺劈2
+470 	巡航者顺劈3
+472 	超级跳，引导
+474 	boss出现
+479 	神罚射线读条 sync /] 14:4A80:/ window 50,10
+484 	神罚射线（死刑）
+489 	3连顺劈
+491 	顺劈
+493 	顺劈
+505 	boss消失
+507 	正义号出现（二运）
+514 	麻将点名出现
+523 	麻将12巡航者出现
+523 	超级跳
+526 	末世宣言开始
+527 	麻将34巡航者出现
+528 	灵泉1
+531 	十字判定
+531 	麻将56巡航者出现
+532 	灵泉2
+535 	麻将78巡航者出现
+536 	灵泉3
+543 	中央分摊
+547 	boss出现
+548 	计数圈判定
+556 	百万神圣
+563 	百万神圣2
+575		扩散盾
+579 	boss消失
+580 	火龙卷落地伤害
+584 	火龙卷1
+587 	火龙卷2
+590 	火龙卷3
+593 	火龙卷4
+596 	火龙卷5
+599 	火龙卷6
+602 	火龙卷7
+602 	巡航者狂暴
+605 	火龙卷8
+608 	火龙卷9
+611 	火龙卷10
+614 	火龙卷11
+617 	火龙卷12
+655 	本体狂暴

@@ -48,11 +48,11 @@ alertall "狂暴" before 31 sound "tts 30秒狂暴"
 #                          时间轴
 #============================================================
 0  --Reset-- sync /Removing combatant (利维亚桑|Leviathan).  Max HP: 1194946560/ window 10000 jump 0
-0  --Start-- sync /我名为利维亚桑|Rise, oceans! Swallow this forsaken land!/ window 10,10
+0  --Start-- sync /吾乃利维亚桑|Rise, oceans! Swallow this forsaken land!/ window 10,10
 12  AOE 
 24  死刑 
 36  看水柱 
-38  boss台词 sync /我之巨颚乃是粉碎一切的力量|All shall crumble before me/ window 30,10
+38  boss台词 sync /无人能敌|All shall crumble before me/ window 30,10
 44  击退+地裂 
 46  斜冲读条 
 50  斜冲 
@@ -74,7 +74,7 @@ alertall "狂暴" before 31 sound "tts 30秒狂暴"
 180  斜冲读条 
 186  斜冲
 198  AOE 
-207  转阶段boss台词 sync /嘎啊啊啊啊|mine for the taking/ window 200,10
+207  转阶段boss台词 sync /吼吼吼吼|mine for the taking/ window 200,10
 207  转阶段读条 sync /14:400F:(利维亚桑|Leviathan)/ window 200,20
 210  P2 
 222  AOE 
